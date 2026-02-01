@@ -5,3 +5,4 @@ const API = axios.create({
 });
 
 export const analyzeWater = (villages) => API.post("/api/analyze", villages);
+export const fetchFromSheet = (sheetId) => API.get(`/api/fetch-from-sheet?sheet_id=${sheetId}`); 
