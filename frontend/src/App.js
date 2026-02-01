@@ -23,19 +23,19 @@ export default function App() {
 
   const [results, setResults] = useState(null);
 
-  // ✅ Example Sheet ID already filled
+  //Example Sheet ID already filled
   const [sheetId, setSheetId] = useState(
     "1svAmPbWX-XCZXN16nYsTlpug-MGZFj3-u6sskvzRWss"
   );
 
-  // ✅ Handle Input Change
+  // Handle Input Change
   const handleChange = (index, field, value) => {
     const updated = [...villages];
     updated[index][field] = value;
     setVillages(updated);
   };
 
-  // ✅ Add Another Village Row
+  //Add Another Village Row
   const addVillage = () => {
     setVillages([...villages, { ...emptyVillage }]);
   };
@@ -70,7 +70,7 @@ export default function App() {
     }
   };
 
-  // ✅ Import from Google Sheets
+  //Import from Google Sheets
   const handleGoogleSheet = async () => {
     try {
       const res = await fetchFromSheet(sheetId);
